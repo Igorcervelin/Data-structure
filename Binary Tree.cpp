@@ -3,7 +3,7 @@
 #include <string.h>
 #include <windows.h>
 
-int tamanho=0; //Variavel global para definir o tamanho da árvore (utilizado para impressão)
+int tamanho = 0; //Variavel global para definir o tamanho da árvore (utilizado para impressão)
 int desdir = 0;
 int desesq = 0;
 
@@ -383,11 +383,11 @@ int desbal(no **atual){
 	aux = *atual;
 	
 	if(aux->dir != NULL){
-		desdir = altura(&aux->dir);
+		desdir = altura(&aux->dir)+1;
 	}
 	
 	if(aux->esq != NULL){
-		desesq = altura(&aux->esq);
+		desesq = altura(&aux->esq)+1;
 	}
 	
 	return(desesq - desdir);
